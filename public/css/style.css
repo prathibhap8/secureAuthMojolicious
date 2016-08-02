@@ -1,0 +1,18 @@
+body {
+    background-color: beige;
+}
+.nav-panel {
+    position: fixed;
+    height: 50px;
+    bottom: 0;
+    width: 100%;
+    background-color:grey;
+}
+.form-group .dijitTextBox {width: 100%; padding: 6px 12px !important;}
+.form-group .dijitValidationTextBox .dijitValidationContainer {padding: 7px 0; margin-right: -12px; margin-top: -5px;}
+#header-panel a, #header-panel span {float: right; color: #FFF; font-weight: bold; padding: 10px;}
+#header-panel span {float: left; font-size: 20px;}
+.claro .dojoxGrid {height: 150px !important;}
+.message {color: red;}
+.dijitDialogCloseIcon {display: none;}
+.grid-heading {margin-top: 90px;}
