@@ -1,0 +1,17 @@
+<VirtualHost *:80>
+     ServerAdmin webmaster@example.com
+     ServerName example.com
+     ServerAlias example.com
+     ScriptAlias /cgi-bin/ /var/www/example.com/cgi-bin/
+     DocumentRoot /var/www/example.com/public_html/
+     ErrorLog /var/log/apache2/example.com.error.log
+     CustomLog /var/log/apache2/example.com.access.log combined
+     <Directory "/var/www/example.com/public_html/cgi-bin">
+        AllowOverride None
+        Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+        Require all granted
+        AddHandler cgi-script .pl
+     </Directory>
+    ProxyPass / http://127.0.0.1:3000/ keepalive=On
+    ProxyPassReverse / http://127.0.0.1:3000/ keepalive=On
+</VirtualHost>
